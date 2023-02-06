@@ -2,8 +2,8 @@
   <v-app>
     <v-app-bar
       app
-      color="Ghost White"
-      dark
+      color="White"
+      
     >
       <!-- <div class="d-flex align-center">
         <v-img
@@ -33,7 +33,11 @@
         text
       >
       <div class="align-left">
-        <span class="mr-2">BDD Editor</span>
+        <img :src="require('./assets/ducenLogo.jpg')"/>
+        <span style="top:17px;left:165px;position:fixed;font-size: 15px;" class="mr-2">BDD-Editor</span>
+        <v-icon style="top:14px;right:75px;position:fixed">far fa-user-circle</v-icon>
+        <span style="top:18px;right:15px;position:fixed"> Admin</span>
+        
       </div>
       
         <!-- <v-icon>mdi-open-in-new</v-icon> -->
@@ -41,22 +45,24 @@
     </v-app-bar>
 
     <v-main>
-
       <AllFeatures></AllFeatures>
+     
        <AddEpic></AddEpic>
        <StoryTable></StoryTable>
-       <AllFeatureTree></AllFeatureTree>
+       <AddEpicPage></AddEpicPage>
+      
       
     </v-main>
   </v-app>
 </template>
 
 <script>
-
+// import AddEpic from './components/AddEpic';
 import AllFeatures from './components/AllFeatures.vue';
 import AddEpic from './components/AddEpic.vue';
 import StoryTable from './components/StoryTable.vue';
-import AllFeatureTree from './components/AllFeatureTree.vue'
+import AddEpicPage from './components/AddEpicPage.vue';
+
 export default {
   name: 'App',
 
@@ -65,7 +71,8 @@ export default {
     AllFeatures,
     AddEpic,
     StoryTable,
-    AllFeatureTree
+    AddEpicPage
+
   },
 
   data: () => ({

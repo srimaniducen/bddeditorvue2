@@ -1,31 +1,58 @@
 <template>
-    <div>
-      <button @click="showTree = !showTree">Toggle Tree View</button>
-      <div v-if="showTree">
-        <ul>
-          <li>Node 1
-            <ul>
-              <li>Sub Node 1</li>
-              <li>Sub Node 2</li>
-            </ul>
-          </li>
-          <li>Node 2
-            <ul>
-              <li>Sub Node 3</li>
-              <li>Sub Node 4</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <v-treeview :items="items"></v-treeview>
   </template>
-<script>
-export default {
-  data() {
-    return {
-      showTree: false
-    };
+
+  <script>
+  export default {
+    data: () => ({
+      items: [
+       
+        {
+          id: 1,
+          name: 'All Features',
+          children: [
+            {
+              id: 2,
+              name: 'Epic 1',
+              children: [
+                {
+                  id: 3,
+                  name: 'Story 1',
+                  children: [
+                    { id: 4, name: 'Scenario 1' },
+                    { id: 5, name: 'Scenario 2' },
+                  ],
+                },
+                {
+                  id: 7,
+                  name: 'Story 2',
+                  children: [
+                    { id: 6, name: 'Scenario 1' },
+                    { id: 7, name: 'Scenario 2' },
+                  ],
+                },
+              ],
+            },
+            {
+              id: 8,
+              name: 'Epic 2',
+              children: [
+                {
+                  id: 9,
+                  name: 'Story 1',
+                  children: [
+                    { id: 10, name: 'Scenario 1' },
+                    { id: 11, name: 'Scenario 2' },
+                    
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+       
+        
+      ],
+    }),
   }
-};
 </script>
-  

@@ -1,27 +1,43 @@
 <template>
-    <!-- <span>All Features</span> -->
 
   <v-card 
-    class="mx-auto"
-    height="590"
+    class="d-inline-block " 
+    height= 100%
     width="256"  
     color="rgba(245, 245, 245, 7.452)"
-    position="static"
-
+    
   >
   <v-list-item-icon
-    style="font-size:20px;margin-left:10px;top:20px;">        
+    style="font-size:20px;margin-left:10px;margin-top:30px;">        
           All Features
   </v-list-item-icon>
-  <v-divider></v-divider>
+  <AllFeatureTree></AllFeatureTree>
   </v-card>
 
 </template>
+<script>
+import AllFeatureTree from './AllFeatureTree.vue';
+export default {
+  name: 'App',
+
+  components: {
+
+   AllFeatureTree
+
+  },
+
+  data: () => ({
+    //
+  }),
+};
+
+
+</script>
 
 
 <style>
 .v-sheet.v-card {
-    right: 545px;
+    margin-right: 695px;
     margin-top: -22px;
 }
 .v-list-item-icon{
