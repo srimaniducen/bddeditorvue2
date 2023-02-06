@@ -41,21 +41,31 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld/>
-      <HomePage></HomePage>
+
+      <AllFeatures></AllFeatures>
+       <AddEpic></AddEpic>
+       <StoryTable></StoryTable>
+       <AllFeatureTree></AllFeatureTree>
+      
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-import HomePage from './components/HomePage.vue';
+
+import AllFeatures from './components/AllFeatures.vue';
+import AddEpic from './components/AddEpic.vue';
+import StoryTable from './components/StoryTable.vue';
+import AllFeatureTree from './components/AllFeatureTree.vue'
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
-    HomePage
+
+    AllFeatures,
+    AddEpic,
+    StoryTable,
+    AllFeatureTree
   },
 
   data: () => ({
