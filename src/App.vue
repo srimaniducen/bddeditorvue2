@@ -50,18 +50,22 @@
        <AddEpic></AddEpic>
        <StoryTable></StoryTable>
        <AddEpicPage></AddEpicPage>
+       <AddStoryPage></AddStoryPage>
       
       
     </v-main>
   </v-app>
+
 </template>
 
 <script>
 // import AddEpic from './components/AddEpic';
+import './style.css';
 import AllFeatures from './components/AllFeatures.vue';
 import AddEpic from './components/AddEpic.vue';
 import StoryTable from './components/StoryTable.vue';
 import AddEpicPage from './components/AddEpicPage.vue';
+import AddStoryPage from './components/AddStoryPage.vue'
 
 export default {
   name: 'App',
@@ -71,7 +75,8 @@ export default {
     AllFeatures,
     AddEpic,
     StoryTable,
-    AddEpicPage
+    AddEpicPage,
+    AddStoryPage
 
   },
 

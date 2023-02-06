@@ -13,4 +13,20 @@ You have no epics created yet.<a
 </span>
 </div>
 </template>
+<script>
+export default {
+  name: 'AddEpic',
+
+  components: {
+
+   
+
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
+
 

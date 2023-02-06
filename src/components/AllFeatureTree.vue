@@ -1,9 +1,13 @@
 <template>
-    <v-treeview :items="items"></v-treeview>
+    <v-treeview dense 
+    activatable
+    color="green"
+    :items="items"></v-treeview>
   </template>
 
   <script>
   export default {
+    name: 'AllFeatureTree',
     data: () => ({
       items: [
        
@@ -24,25 +28,25 @@
                   ],
                 },
                 {
-                  id: 7,
+                  id: 6,
                   name: 'Story 2',
                   children: [
-                    { id: 6, name: 'Scenario 1' },
-                    { id: 7, name: 'Scenario 2' },
+                    { id: 7, name: 'Scenario 1' },
+                    { id: 8, name: 'Scenario 2' },
                   ],
                 },
               ],
             },
             {
-              id: 8,
+              id: 9,
               name: 'Epic 2',
               children: [
                 {
-                  id: 9,
+                  id: 10,
                   name: 'Story 1',
                   children: [
-                    { id: 10, name: 'Scenario 1' },
-                    { id: 11, name: 'Scenario 2' },
+                    { id: 11, name: 'Scenario 1' },
+                    { id: 12, name: 'Scenario 2' },
                     
                   ],
                 },

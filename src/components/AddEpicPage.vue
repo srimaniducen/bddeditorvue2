@@ -41,3 +41,17 @@
         </v-col>
     </v-container>
 </template>
+<script>
+export default {
+  name: "AddEpicPage",
+
+  components: {
+
+
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>

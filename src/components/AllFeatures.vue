@@ -18,7 +18,7 @@
 <script>
 import AllFeatureTree from './AllFeatureTree.vue';
 export default {
-  name: 'App',
+  name: 'AllFeatures',
 
   components: {
 
