@@ -55,3 +55,10 @@ export default {
   }),
 };
 </script>
+<style scoped>
+.container{
+  position: absolute;
+  top: 50px;
+  margin-left: 30%;
+}
+</style>

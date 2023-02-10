@@ -1,13 +1,17 @@
 <template>
-  <v-data-table
+  
+  <v-data-table id="container"
     v-model="selected"
     :headers="headers"
+    :search="search"
     :items="desserts"
     :single-select="singleSelect"
     item-key="name"
     show-select
     class="elevation-1"
+    :value="value"
   >
+  <span> <input type="radio" class="status3" value="Yet to start" > Yet to start</span>
     <!-- <template v-slot:top>
       <v-switch
         v-model="singleSelect"
@@ -31,7 +35,7 @@
             value: 'name',
          
           },
-          { text: 'Status', value: 'Status' },
+          { text: 'Status', value: 'Yet to start' },
           { text: 'Points', value: 'Points' },
           { text: 'Assigned', value: 'Assigned' },
           { text: 'Tags', value: 'Tags' },
@@ -59,3 +63,24 @@
     },
   }
 </script>
+<style scoped>
+.status3:checked:after {
+     /* margin-left: 2px; */
+    margin-bottom: 5px;
+       width:13px;
+    height:13px;
+        border-radius: 15px;
+        position: relative;
+        background-color: #4B0082;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+    }
+
+#container{
+  position: absolute;
+  top: 90px;
+  margin-left: 30%;
+}
+
+</style>

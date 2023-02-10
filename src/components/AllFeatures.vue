@@ -1,5 +1,5 @@
 <template>
-
+<!-- Left pane -->
   <v-card 
     class="d-inline-block " 
     height= 100%

@@ -1,135 +1,278 @@
-<template>
-<span>Story title 
+<template class="main1">
+    <v-card class="card">
+    <v-container>
+<v-col 
+cols="12"
+md="9"        
+>
+
+     <label><b>Story title</b></label>
     <v-text-field  
-    class="title"          
-            solo
-        >
-    </v-text-field>
+        outlined         
+        dense             
+        maxlength="12"           
+        tabindex="4"             
+    ></v-text-field>
+</v-col>
 
-    <div class="status">  Status
-    <v-autocomplete    
-            solo
-            label="to do"
-        >
-    </v-autocomplete>
+<div  class="status">
+    <label><b>Status</b></label>
+    <v-autocomplete 
+        :items="items"
+        outlined         
+        dense               
+    ></v-autocomplete>
+          
 </div>
-<div class="details">Details</div><v-divider></v-divider>
-<div class="user">As a</div>
-<v-text-field            
-            solo
-            label="user"
-        >
-    </v-text-field>
-    <div class="feature">I want</div>
-<v-text-field            
-            solo
-            label="feature"
-        >
-    </v-text-field>
-    <div class="sothat">So that</div>
-<v-text-field            
-            solo
-            label="reason"
-        >
-    </v-text-field>
-    <div class="desc">Description</div>
-<v-textarea           
-            solo
-            label="Type a detailed description of your story here"
-        >
-</v-textarea>
-<div class="assigned">  Assigned to
-    <v-autocomplete    
-            solo
-            label="srimanikandan"
-        >
-    </v-autocomplete>
-    </div>
-    <div class="epic">  Epic
-    <v-autocomplete    
-            solo
-            label="BDD Editor Epic"
-        >
-    </v-autocomplete>
-    </div>
-    <div class="Points">  Story Points
-    <v-autocomplete    
-            solo
-        >
-    </v-autocomplete>
-    </div>
-    <div class="tags">Tags</div>
-<v-text-field            
-            solo
-        >
-    </v-text-field>
-    <div class="task">Task</div><v-divider></v-divider>
+<v-col 
+cols="12" 
+        style="margin-top:-22px"      
+       
+>
+    <label class="details"><b>Details</b></label>
+    <v-divider></v-divider>
+</v-col>
+ 
+<v-col 
+cols="12"   
+xs="100"
+        style="margin-top:-26px"     
+     
+>
+    <label ><b>As a</b></label>
+    <v-text-field  
+    label="user"
+        outlined         
+        dense           
+        class="text-box-style"    
+        tabindex="4"             
+    ></v-text-field>
+</v-col>
 
-    <div class="task">Type your tasks here</div>
-<v-text-field            
-            solo
-        >
-    </v-text-field>
+ <v-col 
+cols="12" 
+        style="margin-top:-33px"      
+>
+    <label><b>I want</b></label>
+    <v-text-field 
+    label="feature"
+        outlined         
+        dense             
+        class="text-box-style"    
+        tabindex="4"             
+    ></v-text-field>
+ </v-col> 
+ 
+<v-col 
+cols="12"    
+        style="margin-top:-35px"        
+>
+    <label ><b>So that</b></label>
+    <v-text-field  
+    label="reason"
+        outlined         
+        dense             
+        maxlength="12"        
+        class="text-box-style"    
+        tabindex="4"             
+    ></v-text-field>
+</v-col>
+ 
+<v-col 
+cols="12"
+        style="margin-top:-33px"      
+>
+    <label ><b>Description</b></label>
+    <v-textarea  
+    label="feature"
+        outlined         
+        dense             
+        maxlength="12"        
+        class="text-box-style"    
+        tabindex="4"             
+    ></v-textarea>
+</v-col>
 
-    <v-checkbox label="Task Name"></v-checkbox> 
+    <v-col 
+        cols="12"
+        md="3"
+        style="margin-top:-38px"    
+    >
+    <label ><b>Assigned to</b></label>
+    <v-autocomplete  
+    label="srimanikandan"
+        outlined         
+        dense          
+        class="text-box-style"    
+        tabindex="4"             
+    ></v-autocomplete>
+    </v-col>
 
-    <v-checkbox label="Lorem"></v-checkbox> 
+    <v-col 
+        cols="12"
+        md="3"  
+        style="margin-top:-38px"      
+ 
+    >
+    <label ><b>Epic</b></label>
+    <v-autocomplete  
+    label="BDD editor epic"
+        outlined         
+        dense          
+        class="text-box-style"    
+        tabindex="4"             
+    ></v-autocomplete>
+    </v-col>
 
-    <div class="details">BDD Scenarios</div><v-divider></v-divider>
-    You have no BDD Behaviour Scenarios defined - how are yoiu going to test your story?<a
+    <v-col 
+        cols="12"
+        md="3"   
+        style="margin-top:-38px"      
+
+    >
+    <label><b>Story points</b></label>
+    <v-text-field
+    outlined
+              type="number"
+              :rules="[numberRule]"
+    ></v-text-field>
+    </v-col>
+
+    <v-col 
+cols="12"   
+        style="margin-top:-38px"      
+     
+>
+    <label ><b>Tags</b></label>
+    <v-text-field  
+        outlined         
+        dense             
+        maxlength="12"        
+        class="text-box-style"    
+        tabindex="4"             
+    ></v-text-field>
+</v-col>
+
+<v-col 
+cols="12"  
+        style="margin-top:-38px"      
+     
+>
+<label><b>Tasks</b></label>
+<v-divider></v-divider>
+</v-col>
+
+<v-col 
+ id="app"
+cols="12"   
+        style="margin-top:-16px"      
+>
+    <label><b>Type your tasks here</b><br></label>
+    <v-text-field outlined         
+        dense             
+        maxlength="12"        
+        class="text-box-style"    
+        tabindex="4"
+        v-model="newTag" @keyup.enter="addTag"></v-text-field>
+    <div>
+      <span class="py-2 invisible"></span>
+      <span v-for="(tag, index) in tags" class="bg-light-800 px-4 py-2 mr-1 rounded-full" :key="index"><br>
+        <v-text-field
+        outlined         
+        dense             
+        maxlength="12"        
+        class="text-box-style"    
+        tabindex="4">
+        <v-checkbox ></v-checkbox><span>{{ tag }}<button @click="deleteTag(tag)" class="mx-1">X</button></span>
+      </v-text-field>
+      </span>
+      </div>
+ </v-col>
+
+ <v-col 
+cols="12"   
+        style="margin-top:-36px"      
+     
+>
+<label><b>BDD Scenarios</b></label>
+<v-divider></v-divider>
+
+
+<label style="font-size:13px">You have no BDD Behaviour Scenarios defined - how are you going to test your story?<a
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         
       >Click to add epic
-      </a>
+</a></label>
 
-      <div><v-btn color="blue">
-      Save
-    </v-btn>
-
+<div>
     <v-btn
-      class="ma-2"
-      outlined
-      color="blue"
-    >
-      Download feature file
-    </v-btn></div>
-
-</span>
-
-
+        depressed   
+        color="primary"    
+        >  
+        <v-icon>fa fa-save</v-icon>&nbsp; Save
+    </v-btn>
+    &nbsp;
+    <v-btn     
+        depressed  
+        outlined  
+        color="primary"   
+        >   
+        <v-icon>fa fa-download</v-icon>&nbsp;
+        Download Feature File
+    </v-btn>
+</div>
+</v-col>
+</v-container>
+</v-card>
 </template>
 
 <style scoped>
- .title{
-    height:50px;
-      width: 1000px;
+
+.card{
+  position:relative;
+  top: 70px;
+  margin-left: 5;
+}
+.theme--light.v-divider {
+    border-color: rgba(0, 0, 0, 3.12);
+    margin-top:4px;
 }
 .status{
-    margin-top:-72px;
-    height:50px;
-    margin-left:1040px;
+    margin-left:78%;
+    margin-top:-101px;
 }
-.details{
-    margin-top:24px;
-}
-.user{
-    margin-top:12px;
-}
-.feature{
-    margin-top:-7px;
-}
-.epic
-{
-width:250px;
-} 
-.assigned{
-width:250px;
-}
-.Points{
-    width:250px;
+</style> 
 
+<script>
+  export default {
+    data: () => ({  
+      items: [ 
+        'to do', 'process', 'completed'
+        ],
+      value: null,
+    }),
+  }
+</script> 
+
+<!-- <script>
+  export default{
+  el: '#app',
+  data:() => ({
+    newTag: '',
+    tags: []
+  }),
+  methods: {
+    addTag() {
+      if (!this.newTag) return;
+      this.tags.push(this.newTag);
+      this.newTag = '';
+    },
+    deleteTag(tag) {
+      this.tags.splice(this.tags.indexOf(tag), 1);
+    }
+  }
 }
-.task{
-    margin-top:20px;
-}
-</style>
+</script>
+ -->
+
+

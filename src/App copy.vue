@@ -30,8 +30,8 @@
       <!-- <v-spacer></v-spacer> -->
 
       <v-btn
-        href="http://localhost:8081/#/HomePage"
-       
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
         text
       >
       <div class="align-left">
@@ -48,37 +48,58 @@
 
     <v-main>
       
-     
+      <!-- <AllFeatures></AllFeatures> -->
+      <Testpagee></Testpagee>
+      <TestPage></TestPage>
+      
+       <!-- <AddEpic></AddEpic>
+       <AllFeaturePage></AllFeaturePage>
+       <StoryTable></StoryTable>
+       <AddEpicPage></AddEpicPage> -->
+       <!-- <AddStoryPage></AddStoryPage> -->
+       <!-- <EpicTable></EpicTable> -->
+       
+       <div>
+        <button ><router-link to="/" class="navbar-brand">Home</router-link></button>
+       </div>
       
       
     </v-main>
-    <!-- <AllFeatures></AllFeatures> -->
-    <!-- <DemoComponent></DemoComponent> -->
-   <!-- <AddScenarioPage></AddScenarioPage>
-   <TestPagee></TestPagee> -->
-   <!-- <RouterButtons></RouterButtons> -->
   </v-app>
 
 </template>
 
 <script>
-// import AllFeatures from "./components/AllFeatures.vue"
-// import AddEpic from "./components/AddEpic.vue"
-// import DemoComponent from "./components/DemoComponent.vue"
-// import AddScenarioPage from "./components/AddScenarioPage.vue"
-// import TestPagee from "./components/TestPagee.vue"
-// import RouterButtons from "./components/RouterButtons.vue"
+// import AddEpic from './components/AddEpic';
+import './style.css';
+// import AllFeatures from './components/AllFeatures.vue';
+// import AddEpic from './components/AddEpic.vue';
+// import StoryTable from './components/StoryTable.vue';
+// import AddEpicPage from './components/AddEpicPage.vue';
+// import AddStoryPage from './components/AddStoryPage.vue'
+import TestPage from './components/TestPage.vue'
+// import EpicTable from './components/EpicTable.vue';
+// import AllFeaturePage from './components/AllFeaturePage.vue'
+import Testpagee from './components/TestPagee.vue'
+
+
+
 export default {
   name: 'App',
 
   components: {
-    // RouterButtons
-  //  AllFeatures,
-  //  AddEpic,
-  //  DemoComponent,
-  //  AddScenarioPage,
-  //  TestPagee,
 
+    // AllFeatures,
+    Testpagee,
+    TestPage,
+    // AddEpic,
+    // StoryTable,
+    // AddEpicPage,
+    // AddStoryPage,
+    
+    // EpicTable,
+    // AllFeaturePage
+   
 
   },
 
