@@ -1,6 +1,5 @@
-<template>
-  
-  <v-data-table id="container"
+<template>  
+  <v-data-table id="margin"
     v-model="selected"
     :headers="headers"
     :search="search"
@@ -12,16 +11,29 @@
     :value="value"
   >
   <span> <input type="radio" class="status3" value="Yet to start" > Yet to start</span>
-    <!-- <template v-slot:top>
-      <v-switch
-        v-model="singleSelect"
-        label="Single select"
-        class="pa-3"
-      ></v-switch>
-    </template> -->
+  <template v-slot:[`item.Tags`]="{ item }" >
+      <v-chip
+      color="black"
+      label
+      outlined
+      >
+        {{ item.Tags }}
+      </v-chip>      
+    </template>
+
+    <template v-slot:[`item.Prioritize`]="{ item }" >
+      <v-icon
+        small
+        class="mr-2"
+        @click="item"
+      >
+        fa fa-level-up
+      </v-icon>     
+    </template>
   </v-data-table>
 </template>
 <script>
+
   export default {
     data () {
       return {
@@ -38,8 +50,8 @@
           { text: 'Status', value: 'Yet to start' },
           { text: 'Points', value: 'Points' },
           { text: 'Assigned', value: 'Assigned' },
-          { text: 'Tags', value: 'Tags' },
-          { text: 'Prioritize', value: 'Prioritize' },
+          {text: 'Tags', value: 'Tags'},
+          {text:'Prioritize', value:'Prioritize'},
         ],
         desserts: [
           {
@@ -47,17 +59,19 @@
             Status: 159,
             Points: 6.0,
             Assigned: "Srimanikandan",
-            Tags: 4.0,
-            Prioritize: 1,
+            Tags:'Tags',
+            Prioritize:'<v-icon>fa fa-trash></v-icon>'
           },
           {
             name: 'Story 2',
             Status: 237,
             Points: 9.0,
-            Assigned: "manikandan",
-            Tags: 4.3,
-            Prioritize: 1,
+            Assigned: "Manoj Gunupudi",
+            Tags:'Tags',
+            Prioritize:'<v-icon>fa fa-trash></v-icon>'
           },
+         
+
         ],
       }
     },
@@ -76,11 +90,10 @@
         display: inline-block;
         visibility: visible;
     }
-
-#container{
-  position: absolute;
-  top: 90px;
-  margin-left: 30%;
+#margin{
+  min-width:130%;
+  margin-top:16px;
+  position:relative;
 }
 
 </style>

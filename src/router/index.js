@@ -7,11 +7,16 @@ import StoryTable from '../components/StoryTable.vue';
 import AddEpicPage from '../components/AddEpicPage.vue';
 import AddStoryPage from '../components/AddStoryPage.vue';
 import AllFeaturePage from '../components/AllFeaturePage.vue';
-import RouterButtons from '../components/RouterButtons.vue';
+// import RouterButtons from '../components/RouterButtons.vue';
 import AddScenarioPage from '../components/AddScenarioPage.vue';
 import AllFeatures from '../components/AllFeatures.vue';
 import StoryPageOne from "../components/StoryPageOne.vue"
 import EpicPageOne from "../components/EpicPageOne.vue"
+import EditEpicPage from "../components/EditEpicPage.vue"
+import EditStoryPage from "../components/EditStoryPage.vue"
+import ScenarioTable from "../components/ScenarioTable.vue"
+import ScenarioPageOne from "../components/ScenarioPageOne.vue"
+import EditScenarioPage from "../components/EditScenarioPage.vue"
 // import TestPage from './components/TestPage.vue';
 // import TestPagee from './components/TestPagee.vue';
 // import HelloWorld from './components/HelloWorld.vue';
@@ -62,12 +67,12 @@ const routes = [
     component: StoryTable,
 
   },
-  {
-    path: "/HomePage/RouterButtons",
-    name: "RouterButtons",
-    component: RouterButtons,
+  // {
+  //   path: "/HomePage/RouterButtons",
+  //   name: "RouterButtons",
+  //   component: RouterButtons,
 
-  },
+  // },
   {
     path: "/HomePage/AddScenarioPage",
     name: "AddScenarioPage",
@@ -92,8 +97,39 @@ const routes = [
     component: EpicPageOne,
 
   },
+  {
+    path: "/HomePage/EditEpicPage",
+    name: "EditEpicPage",
+    component: EditEpicPage,
+
+  },
+  {
+    path: "/HomePage/EditStoryPage",
+    name: "EditStoryPage",
+    component: EditStoryPage,
+
+  },
+  {
+    path: "/HomePage/ScenarioTable",
+    name: "ScenarioTable",
+    component: ScenarioTable,
+
+  },
+  {
+    path: "/HomePage/ScenarioPageOne",
+    name: "ScenarioPageOne",
+    component: ScenarioPageOne,
+
+  },
+  {
+    path: "/HomePage/EditScenarioPage",
+    name: "EditScenarioPage",
+    component: EditScenarioPage,
+
+  },
+ 
 ];
-   
+
 
 
 

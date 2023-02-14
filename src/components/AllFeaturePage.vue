@@ -1,44 +1,42 @@
-'
-'<template>
-   <v-card class="card">
-    <v-container>
-      <v-row >
+<template>
+   <span class="addEpic">
+    All Features<v-divider></v-divider>
       <v-text-field
+      style="position:absolute;width:925px"
+      outlined
         v-model="search"
         append-icon="mdi-magnify"
         label="Search"
         single-line
         hide-details
+        dense
       ></v-text-field> 
       
-      <div>
+      <div class="button">
       <v-btn
    
       depressed
       color="primary"
+      style="margin-left:69%"
+      href="/#/HomePage/AddEpicPage"
     >
-    <v-icon left>
+    <v-icon >
         mdi-plus
       </v-icon>
       Add Epic
-      
-      
-      
     </v-btn>
   </div>
-    </v-row>
+    <EpicTable></EpicTable>
     
-    </v-container>
-  </v-card>
+</span>
 </template>
 <script>
+import EpicTable from './EpicTable.vue';
 export default {
-  name: "AddEpicPage",
-
   components: {
-
-
-  },
+    EpicTable
+},
+  name: "AddEpicPage",
 
   data: () => ({
     //
@@ -46,9 +44,13 @@ export default {
 };
 </script>
 <style scoped>
-.card{
+.theme--light.v-divider {
+    border-color: rgba(0, 0, 0, 1.12);
+}
+
+.addEpic{
   position:relative;
-  top: 70px;
-  margin-left: 5;
+  top: 78px;
+  left: 21%;
 }
 </style>

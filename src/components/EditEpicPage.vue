@@ -2,17 +2,19 @@
     <v-container class="container" style="width:80%">
    
           
-               <span> <label class="label-style">Epic Title</label> </span>
+               <span> <label class="label-style">Epic Title</label> </span> 
                 
                 <v-text-field
+                
                   outlined
                   dense
-                 
-                ></v-text-field>
+                  value="BDD Epic"
+                ></v-text-field> 
                 <label class="label-style">Description</label>
                     <v-textarea
                       outlined
                      placeholder="Type a detailed description of your story here"
+                     value="BDD Description"
                     ></v-textarea>
                     <v-btn
       depressed

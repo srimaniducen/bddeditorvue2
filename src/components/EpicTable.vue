@@ -1,5 +1,5 @@
 <template>
-  <v-data-table id="container"
+  <v-data-table id="epic"
     v-model="selected"
     :headers="headers"
     :items="desserts"
@@ -8,17 +8,15 @@
     show-select
     class="elevation-1"
   >
-    <!-- <template v-slot:top>
-      <v-switch
-        v-model="singleSelect"
-        label="Single select"
-        class="pa-3"
-      ></v-switch>
-    </template> -->
+
+
   </v-data-table>
 </template>
+
 <script>
+
   export default {
+    
     data () {
       return {
         singleSelect: false,
@@ -33,17 +31,17 @@
           },
           { text: 'Description', value: 'Description' },
           
+          
         ],
         desserts: [
           {
             name: 'Epic 1',
             Description: 159,
-        
+          
           },
           {
             name: 'Epic 2',
             Description: 237,
-          
           },
         ],
       }
@@ -51,9 +49,11 @@
   }
 </script>
 <style scoped>
-#container{
+#epic{
+  z-index:1;
+  width:78%;
   position: absolute;
-  top: 90px;
-  margin-left: 30%;
+  top: 110px;
 }
+
 </style>

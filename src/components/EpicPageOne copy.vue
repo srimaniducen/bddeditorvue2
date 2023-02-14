@@ -8,7 +8,6 @@
         outlined  
         color="primary"   
         style="margin-top:3px;margin-left:65%;position:absolute"
-        href="/#/HomePage/EditEpicPage"
         >   
         <v-icon>fa fa-edit</v-icon>&nbsp;
         Edit Epic

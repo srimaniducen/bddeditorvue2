@@ -16,7 +16,7 @@
                 dark
               >
                 Add Epic
-            </v-btn>
+              </v-btn>
             </div>
             <div class="my-2">
               <v-btn
