@@ -33,7 +33,7 @@
       <!-- <v-spacer></v-spacer> -->
 
       <v-btn
-        href="http://localhost:8080/#/HomePage/AddEpic"
+        href="http://localhost:8080/#/HomePage/AddFeature"
        
         text
       >
@@ -56,34 +56,20 @@
       
     </v-main>
     <AllFeatures></AllFeatures>
-    <!-- <AddStoryPage></AddStoryPage> -->
-    <!-- <DemoComponent></DemoComponent> -->
-   <!-- <AddScenarioPage></AddScenarioPage>
-   <TestPagee></TestPagee> -->
-   <!-- <RouterButtons></RouterButtons> -->
+
   </v-app>
 
 </template>
 
 <script>
-import AllFeatures from "./components/AllFeatures.vue"
-// import AddStoryPage from "./components/AddStoryPage.vue"
-// import DemoComponent from "./components/DemoComponent.vue"
-// import AddScenarioPage from "./components/AddScenarioPage.vue"
-// import TestPagee from "./components/TestPagee.vue"
-// import RouterButtons from "./components/RouterButtons.vue"
+import AllFeatures from "@/components/All/AllFeatures/AllFeatures.vue"
+
 export default {
   name: 'App',
 
   components: {
-    // RouterButtons
-   AllFeatures,
-  //  AddStoryPage
-  //  AddEpic,
-  //  DemoComponent,
-  //  AddScenarioPage,
-  //  TestPagee,
 
+   AllFeatures,
 
   },
 
@@ -99,4 +85,5 @@ export default {
   text-align: left !important;
   font-size: 18px;
 }
+
 </style>

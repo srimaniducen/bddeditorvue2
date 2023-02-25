@@ -3,11 +3,11 @@
   <span style="width:80%" class="container">
     <b>All Features </b>   
 
-<v-divider></v-divider>
+<v-divider ></v-divider>
 You have no epics created yet.<a
-        href="/#/HomePage/AddEpicPage"
+        href="/#/HomePage/AddFeaturePage"
         
-      >Click to add epic
+      >Click to add feature
       </a>
   
 </span>

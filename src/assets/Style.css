@@ -1,0 +1,11 @@
+.scenarioT {
+    margin-top: -101px;
+    margin-left: -27%;
+}
+
+.v-text-field .v-input__control .v-input__slot {
+    min-height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+

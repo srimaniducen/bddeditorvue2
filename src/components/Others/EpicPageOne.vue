@@ -1,6 +1,6 @@
 <template >
     <div> 
-    <span style="font-size: 20px;width:80%;margin-top:-11px;margin-left:13px;" class="bar-item">Epic 1
+    <span style="font-size: 20px;width:80%;margin-top:-11px;margin-left:13px;" class="bar-item">Feature 1
     <v-btn 
     class="edit" 
     small
@@ -11,11 +11,11 @@
         href="/#/HomePage/EditEpicPage"
         >   
         <v-icon>fa fa-edit</v-icon>&nbsp;
-        Edit Epic
+        Edit Feature
     </v-btn>
     <v-divider></v-divider>
-    <p style="font-size: 18px;position:absolute;margin-top:20px;">Epic Title : Title of the epic will be shown</p>
-    <p style="font-size: 15px;margin-top:50px;">Description : Description of the epic will be shown</p>
+    <p style="font-size: 18px;position:absolute;margin-top:20px;">Feature Title : Title of the Feature will be shown</p>
+    <p style="font-size: 15px;margin-top:50px;">Description : Description of the Feature will be shown</p>
     <v-text-field
       style="position:absolute;width:925px"
       outlined

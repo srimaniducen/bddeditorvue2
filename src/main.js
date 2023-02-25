@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 Vue.use(VueRouter);
 // import PrimeVue from 'primevue/config'  // import PrimeVue
-import HomePage from '@/components/HomePage.vue';
+import HomePage from '@/components/Home/HomePage/HomePage.vue';
 // import CSS resources
 import 'primevue/resources/primevue.min.css'            // core 
 import 'primevue/resources/themes/saga-blue/theme.css'  // theme

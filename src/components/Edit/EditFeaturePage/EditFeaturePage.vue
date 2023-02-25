@@ -1,25 +1,27 @@
 <template>
-    <v-container class="container" style="width:80%">
+    <v-container class="container">
    
           
-               <span> <label class="label-style">Epic Title</label> </span>
+               <span> <label class="text">Feature Title</label> </span> 
                 
                 <v-text-field
+                
                   outlined
                   dense
-                 
-                ></v-text-field>
-                <label class="label-style">Description</label>
+                  value="BDD Epic"
+                ></v-text-field> 
+                <label class="text">Description</label>
                     <v-textarea
                       outlined
                      placeholder="Type a detailed description of your story here"
+                     value="BDD Description"
                     ></v-textarea>
                     <v-btn
       depressed
-      color="primary"
+      style="border-radius:9px;height:35px;background-color:#2B5AD9;color:white"
     >
     <v-icon left>
-        mdi-folder-open
+        fa fa-save
       </v-icon>
       Save
       
@@ -44,8 +46,9 @@ export default {
 </script>
 <style scoped>
 .container{
-  margin-left:20%;
+  margin-left:18%;
   margin-top:5%;
+  width:80%
 }
 .v-text-field{
         margin-top:8px;

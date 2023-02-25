@@ -1,12 +1,13 @@
 <template>
   <div>
     <v-treeview
+    dense
       v-model="tree"
       :items="items"
       activatable
       item-key="name">
       <template v-slot:label="{ item }">
-        <a v-if="item.name === 'Epic 1'" @click="displayEpicPageOne(item)">{{ item.name }}</a>
+        <a v-if="item.name === 'Feature 1'" @click="displayFeaturePageOne(item)">{{ item.name }}</a>
         <a v-else-if="item.name === 'Story 1'" @click="displayStoryPageOne(item)">{{ item.name }}</a>
         <a v-else-if="item.name === 'All Features'" @click="displayAllFeaturePage(item)">{{ item.name }}</a>
         <a v-else-if="item.name === 'Scenario 1'" @click="displayScenarioPageOne(item)">{{ item.name }}</a>
@@ -31,7 +32,7 @@ export default {
   },
   data() {
     return {
-      showEpicPageOne: false,
+      showFeaturePageOne: false,
       showStoryPageOne: false,
       items: [
         {
@@ -40,7 +41,7 @@ export default {
           children: [
             {
               id: 2,
-              name: 'Epic 1',
+              name: 'Feature 1',
               children: [
                 {
                   id: 3,
@@ -62,7 +63,7 @@ export default {
             },
             {
               id: 9,
-              name: 'Epic 2',
+              name: 'Feature 2',
               children: [
                 {
                   id: 10,
@@ -80,10 +81,10 @@ export default {
     };
   },
   methods: {
-    displayEpicPageOne(item) {
+    displayFeaturePageOne(item) {
       console.log(item);
-      this.showEpicPageOne = !this.showEpicPageOne;
-      this.$router.push({ path: '/HomePage/EpicPageOne' });
+      this.showFeaturePageOne = !this.showFeaturePageOne;
+      this.$router.push({ path: '/HomePage/FeaturePageOne' });
     },
     displayStoryPageOne() {
       this.showStoryPageOne = !this.showStoryPageOne;

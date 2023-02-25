@@ -1,42 +1,42 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HomePage from '../components/HomePage.vue';
-import EpicTable from "../components/EpicTable.vue";
-import AddEpic from '../components/AddEpic.vue';
-import StoryTable from '../components/StoryTable.vue';
-import AddEpicPage from '../components/AddEpicPage.vue';
-import AddStoryPage from '../components/AddStoryPage.vue';
-import AllFeaturePage from '../components/AllFeaturePage.vue';
-// import RouterButtons from '../components/RouterButtons.vue';
-import AddScenarioPage from '../components/AddScenarioPage.vue';
-import AllFeatures from '../components/AllFeatures.vue';
-import StoryPageOne from "../components/StoryPageOne.vue"
-import EpicPageOne from "../components/EpicPageOne.vue"
-import EditEpicPage from "../components/EditEpicPage.vue"
-import EditStoryPage from "../components/EditStoryPage.vue"
-import ScenarioTable from "../components/ScenarioTable.vue"
-import ScenarioPageOne from "../components/ScenarioPageOne.vue"
-import EditScenarioPage from "../components/EditScenarioPage.vue"
+import HomePage from '@/components/Home/HomePage/HomePage.vue';
+import FeatureTable from '@/components/DataTable/FeatureTable/FeatureTable.vue'
+import AddFeature from '@/components/Add/AddFeature/AddFeature.vue';
+import StoryTable from '@/components/DataTable/StoryTable/StoryTable.vue';
+import AddFeaturePage from '@/components/Add/AddFeaturePage/AddFeaturePage.vue';
+import AddStoryPage from '@/components/Add/AddStoryPage/AddStoryPage.vue';
+import AllFeaturePage from '@/components/All/AllFeaturePage/AllFeaturePage.vue';
+import AddScenarioPage from '@/components/Add/AddScenarioPage/AddScenarioPage.vue';
+import AllFeatures from '@/components/All/AllFeatures/AllFeatures.vue';
+import StoryPageOne from '@/components/Display/StoryPageOne/StoryPageOne.vue';
+import FeaturePageOne from '@/components/Display/FeaturePageOne/FeaturePageOne.vue';
+import EditFeaturePage from '@/components/Edit/EditFeaturePage/EditFeaturePage.vue';
+import EditStoryPage from '@/components/Edit/EditStoryPage/EditStoryPage.vue';
+import ScenarioTable from '@/components/DataTable/ScenarioTable/ScenarioTable.vue';
+import ScenarioPageOne from '@/components/Display/ScenarioPageOne/ScenarioPageOne.vue';
+import EditScenarioPage from '@/components/Edit/EditScenarioPage/EditScenarioPage.vue'
+
 // import TestPage from './components/TestPage.vue';
 // import TestPagee from './components/TestPagee.vue';
 // import HelloWorld from './components/HelloWorld.vue';
-// import HomePage from "../components/HomePage";
+// import HomePage from '@/components/HomePage";
 
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/HomePage",
+    path: "/",
     name: "HomePage",
     component: HomePage,
 
   },
 
   {
-    path: "/HomePage/AddEpicPage",
-    name: "AddEpicPage",
-    component: AddEpicPage
+    path: "/HomePage/AddFeaturePage",
+    name: "AddFeaturePage",
+    component: AddFeaturePage
   },
   
   {
@@ -52,14 +52,14 @@ const routes = [
     component: AllFeaturePage
   },
   {
-    path: "/HomePage/AddEpic",
-    name: "AddEpic",
-    component: AddEpic
+    path: "/HomePage/AddFeature",
+    name: "AddFeature",
+    component: AddFeature
   },
   {
-    path: "/HomePage/EpicTable",
-    name: "EpicTable",
-    component: EpicTable
+    path: "/HomePage/FeatureTable",
+    name: "FeatureTable",
+    component: FeatureTable
   },
   {
     path: "/HomePage/StoryTable",
@@ -92,15 +92,15 @@ const routes = [
 
   },
   {
-    path: "/HomePage/EpicPageOne",
-    name: "EpicPageOne",
-    component: EpicPageOne,
+    path: "/HomePage/FeaturePageOne",
+    name: "FeaturePageOne",
+    component: FeaturePageOne,
 
   },
   {
-    path: "/HomePage/EditEpicPage",
-    name: "EditEpicPage",
-    component: EditEpicPage,
+    path: "/HomePage/EditFeaturePage",
+    name: "EditFeaturePage",
+    component: EditFeaturePage,
 
   },
   {
@@ -137,5 +137,6 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
+
 
 export default router;
